@@ -1,6 +1,5 @@
 @import "../../styles/vars.scss";
 
-
 .header {
   width: 300px;
   position: fixed;
@@ -36,41 +35,39 @@
   &__nav {
     margin-top: 30px;
     nav {
-        ul {
-            list-style: none;
-            li {
-                padding: 10px 0; 
-                a {
-                   color: #fff;
-                   text-decoration: none;
-                   &:hover {
-                    color:$main-color
-                   } 
-                }
+      ul {
+        list-style: none;
+        li {
+          padding: 10px 0;
+          a {
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+              color: $main-color;
             }
+          }
         }
+      }
     }
   }
-  @media screen and (max-width:991px){
+  @media screen and (max-width: 991px) {
     left: -300px;
     &--active {
-        left: 0;
+      left: 0;
     }
   }
 }
 
 .menu-btn-container {
-    display: none;
-    button {
-       position: fixed;
-       top: 10px;
-       right: 10px; 
-       background: $main-color;
-    }
+  display: none;
+  button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: $main-color;
+  }
 
-    @media screen and (max-width: 991px){
-        display: block;
-    }
+  @media screen and (max-width: 991px) {
+    display: block;
+  }
 }
-
-
