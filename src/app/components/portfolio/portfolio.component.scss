@@ -6,13 +6,13 @@
   &__item {
     position: relative;
     overflow: hidden;
+    margin-bottom: 15px;
     &:hover {
       .portfolio__item-content {
         opacity: 1;
         transform: scale(1);
       }
     }
-    
   }
 
   &__item-content {
@@ -30,35 +30,45 @@
     opacity: 0;
     transition: 0.3s all ease;
 
-    a {
-        background: $main-color;
+    @media screen and (max-width: 991px) {
+      height: 20%;
+      top: auto;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      transform: scale(1);
+      opacity: 1;
+      transition: 0.3s all ease;
     }
 
-    
+    a {
+      background: $main-color;
+    }
 
     &::before {
-        content: "";
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 40px;
-        height: 40px;
-        border-left: 2px solid #171717;
-        border-top: 2px solid #171717;
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 40px;
+      height: 40px;
+      border-left: 2px solid #171717;
+      border-top: 2px solid #171717;
     }
     &::after {
-        content: "";
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        width: 40px;
-        height: 40px;
-        border-right: 2px solid #171717;
-        border-bottom: 2px solid #171717;
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 40px;
+      height: 40px;
+      border-right: 2px solid #171717;
+      border-bottom: 2px solid #171717;
     }
   }
   &__item-desc {
-        margin-bottom: 15px;
-        display: block;
-    }
+    margin-bottom: 15px;
+    display: block;
+  }
 }

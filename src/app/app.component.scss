@@ -6,5 +6,9 @@
     main {
         margin-left: 300px;
         position: relative;
+
+        @media screen and (max-width:991px) {
+            margin-left: 0;
+        }
     }
 }
